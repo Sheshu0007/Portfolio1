@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheshu Reddy - Data Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-bg {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            border-radius: 50%;
+            border: 5px solid #4fc3f7;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .skill-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4fc3f7, #81c784);
+            border-radius: 10px;
+            transition: width 1.2s ease;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold">Sheshu Reddy</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#hero" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+                <a href="#education" class="hover:text-yellow-300 transition">Education</a>
+                <a href="#projects" class="hover:text-yellow-300 transition">Projects</a>
+                <a href="#skills" class="hover:text-yellow-300 transition">Skills</a>
+                <a href="#certifications" class="hover:text-yellow-300 transition">Certifications</a>
+            </nav>
+            <button class="md:hidden" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-blue-700 py-4 space-y-2">
+            <a href="#hero" class="text-white hover:text-yellow-300" onclick="toggleMenu()">Home</a>
+            <a href="#contact" class="text-white hover:text-yellow-300" onclick="toggleMenu()">Contact</a>
+            <a href="#education" class="text-white hover:text-yellow-300" onclick="toggleMenu()">Education</a>
+            <a href="#projects" class="text-white hover:text-yellow-300" onclick="toggleMenu()">Projects</a>
+            <a href="#skills" class="text-white hover:text-yellow-300" onclick="toggleMenu()">Skills</a>
+            <a href="#certifications" class="text-white hover:text-yellow-300" onclick="toggleMenu()">Certifications</a>
+        </div>
+    </header>
+
+    <section id="hero" class="min-h-screen flex items-center bg-white bg-opacity-50">
+        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="flex-shrink-0 mb-8 md:mb-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74d006e2-d1dc-4ce0-a16e-74c85aa5bba2.png" alt="Professional portrait of Sheshu Reddy, a young data analyst with a confident expression, wearing a casual shirt in a modern office setting with data charts in the background" class="profile-img w-64 h-64 md:w-80 md:h-80" />
+            </div>
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6">Aspiring Data Analyst</h2>
+                <p class="text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
+                    With a strong interest in turning raw data into actionable insights, I am experienced in Python, SQL, and Excel for data cleaning, analysis, and visualization. Passionate about solving real-world problems and contributing to data-driven decision-making in a collaborative environment.
+                </p>
+                <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition transform hover:scale-105">Explore My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Get In Touch</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 section-bg p-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+                        <span class="text-lg"><a href="tel:+919141129750" class="text-blue-600 hover:underline">+91 91411 29750</a></span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                        <span class="text-lg"><a href="mailto:sheshureddy1611@gmail.com" class="text-blue-600 hover:underline">sheshureddy1611@gmail.com</a></span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+                        <span class="text-lg"><a href="https://www.linkedin.com/in/sheshu-reddy-381721232" target="_blank" class="text-blue-600 hover:underline">LinkedIn Profile</a></span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fab fa-github text-blue-600 text-xl"></i>
+                        <span class="text-lg"><a href="https://github.com/Sheshu0007" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a></span>
+                    </div>
+                </div>
+                <form class="space-y-4" onsubmit="submitForm(event)">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <textarea placeholder="Your Message" rows="5" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition transform hover:scale-105">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Education</h3>
+            <div class="space-y-8">
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-2">Bachelor of Technology in Computer Science and Engineering (IoT)</h4>
+                    <p class="text-gray-600 mb-2">Holy Mary Institute of Technology & Science, Medchal(D), Telangana</p>
+                    <p class="font-medium">2022 - 2025 | CGPA: 7.3</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-2">Diploma in Plastic & Mould Technology</h4>
+                    <p class="text-gray-600 mb-2">Central Institute of Petrochemical Engineering and Technology, Medchal(D), Telangana</p>
+                    <p class="font-medium">2019 - 2022 | 73%</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-2">Secondary Education</h4>
+                    <p class="text-gray-600 mb-2">Adarsha Vidyalaya (RMSA) School, Raichur(D), Karnataka</p>
+                    <p class="font-medium">2019 | 69%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card section-bg p-8 fade-in">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3d2636fc-ebd1-4dad-a8c7-d46d6484dae3.png" alt="Screenshot of a web-based attendance management system interface, displaying login page with role-based access for admin, faculty, and students, featuring clean UI with graphs and data tables in a modern dashboard layout" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Web-Based Attendance Management System</h4>
+                    <p class="text-gray-600 mb-4">Technologies: PHP, MySQL, HTML, CSS, WAMP/XAMPP</p>
+                    <ul class="text-sm space-y-2 list-disc list-inside">
+                        <li>Developed a secure, role-based attendance portal for Admin, Faculty, and Students.</li>
+                        <li>Used MySQL for backend database management and WAMP/XAMPP for local development and testing.</li>
+                        <li>Implemented features for real-time attendance tracking, student management, and dashboard views for different user roles.</li>
+                        <li>Ensured data security using password hashing techniques in PHP.</li>
+                    </ul>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Source</a>
+                </div>
+                <!-- Placeholder for more projects if needed -->
+                <div class="project-card section-bg p-8 fade-in flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-plus-circle text-6xl text-gray-400 mb-4"></i>
+                        <p class="text-gray-500">More projects coming soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Skills & Expertise</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Programming Languages</h4>
+                    <div class="skill-bar mb-2"><div class="skill-fill" style="width: 85%"></div></div>
+                    <p>Python, SQL</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Data Visualization</h4>
+                    <div class="skill-bar mb-2"><div class="skill-fill" style="width: 80%"></div></div>
+                    <p>Power BI, Matplotlib</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Data Manipulation</h4>
+                    <div class="skill-bar mb-2"><div class="skill-fill" style="width: 90%"></div></div>
+                    <p>Pandas, NumPy</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Database Management</h4>
+                    <div class="skill-bar mb-2"><div class="skill-fill" style="width: 75%"></div></div>
+                    <p>MySQL</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Other Tools</h4>
+                    <div class="skill-bar mb-2"><div class="skill-fill" style="width: 70%"></div></div>
+                    <p>Excel</p>
+                </div>
+                <div class="section-bg p-8 fade-in">
+                    <h4 class="text-xl font-bold text-blue-700 mb-4">Analytical Skills</h4>
+                    <div class="skill-bar mb-2"><div class="skill-fill" style="width: 88%"></div></div>
+                    <p>Data Cleaning and Preprocessing, Statistical Analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Certifications</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-bg p-8 fade-in flex items-center space-x-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1d563bb0-a70f-43bb-b47b-326422cb19d8.png" alt="Certificate imagery for Data Analytics Job Simulation from Forage, featuring a professional badge design with analytics icons and the Forage logo" class="w-24 h-24 rounded-full" />
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-700">Data Analytics Job Simulation</h4>
+                        <p class="text-gray-600">Achieved certification from Forage</p>
+                    </div>
+                </div>
+                <div class="section-bg p-8 fade-in flex items-center space-x-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c9df86dc-9bca-4a2f-880a-15aa8071b83e.png" alt="Certificate imagery for Cybersecurity Analyst Job Simulation from Forage, featuring a security-themed badge with lock icons and the Forage logo" class="w-24 h-24 rounded-full" />
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-700">Cybersecurity Analyst Job Simulation</h4>
+                        <p class="text-gray-600">Achieved certification from Forage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center section-bg p-8 fade-in">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-blue-800">Languages</h3>
+            <p class="text-lg">English, Hindi, Telugu, Kannada</p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <span class="bg-blue-100 px-4 py-2 rounded-full text-blue-800">Fluent in English</span>
+                <span class="bg-blue-100 px-4 py-2 rounded-full text-blue-800">Proficient in Hindi</span>
+                <span class="bg-blue-100 px-4 py-2 rounded-full text-blue-800">Native in Telugu</span>
+                <span class="bg-blue-100 px-4 py-2 rounded-full text-blue-800">Native in Kannada</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">© 2024 Sheshu Reddy. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="tel:+919141129750" class="text-2xl hover:text-yellow-300"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:sheshureddy1611@gmail.com" class="text-2xl hover:text-yellow-300"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/sheshu-reddy-381721232" target="_blank" class="text-2xl hover:text-yellow-300"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Sheshu0007" target="_blank" class="text-2xl hover:text-yellow-300"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! Your message has been sent successfully.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
